@@ -1,0 +1,86 @@
+
+
+<div class="row">
+
+
+  <div class="col-lg-4 col-md-4 col-sm-4">
+    <div ba-panel
+         ba-panel-class="tabs-panel x-panel with-scroll">
+      <uib-tabset class="tabs-left">
+
+        <uib-tab data-ng-repeat="(key,value) in typeList" heading="{{key}}" data-ng-click="flage(key,value)">
+          <!-- <p data-ng-repeat="d in dataList" data-ng-click="getPdf(d.c_foldername,d.c_filename)" style="cursor: pointer;color:#209e91">{{d.c_foldername}}</p> -->
+          <ul class="todo-list" ui-sortable ng-model="dataList">
+            <li ng-repeat="item in dateList" ng-if="!item.deleted" ng-init="activeItem=false"
+                ng-class="{checked: isChecked, active: activeItem}"
+                ng-mouseenter="activeItem=true" ng-mouseleave="activeItem=false" >
+              <div class="blur-container"><div class="blur-box"></div></div>
+              <i class="mark" style="background-color: {{::item.color}}"></i>
+              <label class="todo-checkbox custom-checkbox custom-input-success">
+                <input type="checkbox" ng-model="isChecked">
+                <span class="cut-with-dots" data-ng-click="getPdf('new',item.lov_name,item.c_foldername,item.c_filename)">{{ item.c_foldername }}</span>
+              </label>
+              <i class="remove-todo ion-ios-close-empty" ng-click="item.deleted = true"></i>
+            </li>
+          </ul>
+
+        </uib-tab>
+        <uib-tab  heading="opd เก่า" data-ng-click="oldCard()">
+          <ul class="todo-list" ui-sortable ng-model="opdcardList">
+            <li ng-repeat="item in opdcardList" ng-if="!item.deleted" ng-init="activeItem=false"
+                ng-class="{checked: isChecked, active: activeItem}"
+                ng-mouseenter="activeItem=true" ng-mouseleave="activeItem=false" >
+              <div class="blur-container"><div class="blur-box"></div></div>
+              <i class="mark" style="background-color: {{::item.color}}"></i>
+              <label class="todo-checkbox custom-checkbox custom-input-success">
+                <input type="checkbox" ng-model="isChecked">
+                <span class="cut-with-dots" data-ng-click="getPdf('old','OPD','opdcard',item.card_path)">{{ item.card_path }}</span>
+              </label>
+              <i class="remove-todo ion-ios-close-empty" ng-click="item.deleted = true"></i>
+            </li>
+        </ul>
+        </uib-tab>
+        <uib-tab  heading="chart เก่า" data-ng-click="oldChart()" data-ng-show="chartList.length > 0">
+          <ul class="todo-list" ui-sortable ng-model="chartList">
+            <li ng-repeat="item in chartList" ng-if="!item.deleted" ng-init="activeItem=false"
+                ng-class="{checked: isChecked, active: activeItem}"
+                ng-mouseenter="activeItem=true" ng-mouseleave="activeItem=false" >
+              <div class="blur-container"><div class="blur-box"></div></div>
+              <i class="mark" style="background-color: {{::item.color}}"></i>
+              <label class="todo-checkbox custom-checkbox custom-input-success">
+                <input type="checkbox" ng-model="isChecked">
+                <span class="cut-with-dots" data-ng-click="getPdf('old','IPD','chart',item.file_name,item.chart_year)">{{ item.chart_an}}</span>
+              </label>
+              <i class="remove-todo ion-ios-close-empty" ng-click="item.deleted = true"></i>
+            </li>
+        </ul>
+
+        </uib-tab>
+
+
+      </uib-tabset>
+    </div>
+  </div>
+
+  <div class="col-lg-8 col-md-8 col-sm-8"
+       ba-panel
+       ba-panel-class="panel with-scroll light-text"
+       ba-panel-title="Chart Viewer">
+      <ng-pdf template-url="pdf/viewer.html" class="rotate0" >
+      </ng-pdf>
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+
+<!--<div class="row">
+  <div class="col-lg-4 col-sm-6 col-xs-12">
+    <div ba-panel ba-panel-title="Weather" ba-panel-class="medium-panel with-scroll">
+      <blur-weather forecast="5"></blur-weather>
+    </div>
+  </div>
+</div>-->

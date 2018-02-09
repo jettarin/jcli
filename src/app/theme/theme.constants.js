@@ -42,7 +42,7 @@
     // convert a decimal value to hex
     function d2h(d) {
       return d.toString(16);
-    }
+}
     // convert a hex value to decimal
     function h2d(h) {
       return parseInt(h, 16);

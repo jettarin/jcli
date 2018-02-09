@@ -1,0 +1,25 @@
+<nav ng-class="getNavStyle(scroll)" >
+  <div class="row">
+    <div class="col-sm-6">
+      <button type="button" class="btn btn-primary btn-icon" ng-click="rotate()"> 90</button>
+      <button type="button" class="btn btn-primary btn-icon " ng-click="goPrevious()"><i class="ion-ios-undo" ></i></button>
+      <button type="button" class="btn btn-primary btn-icon" ng-click="zoomIn()"> +</button>
+      <button type="button" class="btn btn-primary btn-with-icon" ng-click="fit()"><i class="ion-ios-search"></i>100 %</button>
+      <button type="button" class="btn btn-primary btn-icon" ng-click="zoomOut()"> -</button>
+      <button type="button" class="btn btn-primary btn-icon" ng-click="goNext()"><i class="ion-ios-redo"></i></button>
+		</div>
+    <div class="col-sm-6 pull-right">
+				<div class="col-sm-3">
+							<input type="text" class="form-control form-control-rounded text-right" placeholder="Rounded Corners"  min=1 ng-model="pageNum">
+				</div>
+        <div class="form-group col-sm-2">
+            <label class=" control-label text-left">จาก</label>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control form-control-rounded text-left" id="input05" placeholder="Disabled Input" ng-model="pageCount" disabled>
+        </div>
+		</div>
+  </div>
+</nav>
+<hr>
+{{loading}}
