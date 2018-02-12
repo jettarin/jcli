@@ -44,7 +44,7 @@
         console.log($scope.authen);
         if($scope.authen.data){
           localStorage.setObject('dataUser', $scope.authen.data);
-          $state.go('main.patient');
+          $state.go('main.dashboard');
           toastr.success(' Success ', 'Login !', {})
         }else{
           toastr.error('  ', ' กรุณาตรวจสอบการกรอกใหม่ !', {})

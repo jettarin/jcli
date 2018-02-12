@@ -22,7 +22,7 @@ function login(req, res, next){
       .json({
         status: 200,
         data: results[0],
-        message: 'Check User HosXP Login'
+        message: 'Success'
       });
   });
 

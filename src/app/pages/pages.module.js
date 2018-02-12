@@ -10,7 +10,8 @@
       'BlurAdmin.pages.services',
       // 'BlurAdmin.pages.config',
       'BlurAdmin.pages.main',
-      // 'BlurAdmin.pages.dashboard',
+      'BlurAdmin.pages.dashboard',
+      'BlurAdmin.pages.search',
       // 'BlurAdmin.pages.ui',
       // 'BlurAdmin.pages.components',s
       // 'BlurAdmin.pages.form',
