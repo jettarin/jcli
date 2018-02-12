@@ -14,9 +14,9 @@
       .state('main.search', {
         url: '/search',
         templateUrl: 'app/pages/search/search.html',
-        title: 'Search',
+        title: 'Patient',
         sidebarMeta: {
-          icon: 'ion-android-home',
+          icon: 'ion-search',
           order: 0,
         },
         authenticate: true,

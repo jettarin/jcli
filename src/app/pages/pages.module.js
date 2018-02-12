@@ -12,13 +12,13 @@
       'BlurAdmin.pages.main',
       'BlurAdmin.pages.dashboard',
       'BlurAdmin.pages.search',
-      // 'BlurAdmin.pages.ui',
-      // 'BlurAdmin.pages.components',s
-      // 'BlurAdmin.pages.form',
-      // 'BlurAdmin.pages.tables',
-      // 'BlurAdmin.pages.charts',
-      // 'BlurAdmin.pages.maps',
-      // 'BlurAdmin.pages.profile',
+      'BlurAdmin.pages.ui',
+      'BlurAdmin.pages.components',
+      'BlurAdmin.pages.form',
+      'BlurAdmin.pages.tables',
+      'BlurAdmin.pages.charts',
+      'BlurAdmin.pages.maps',
+      'BlurAdmin.pages.profile',
 
       'BlurAdmin.pages.patient',
 
