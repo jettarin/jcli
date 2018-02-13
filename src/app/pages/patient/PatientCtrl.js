@@ -13,6 +13,12 @@
     $log.info('Enter PatientCtrl');
     $scope.homepath = APP.CONTEXT_PATH
 
+
+    $scope.search = function (){
+      alert("search function")
+    }
+
+
     $scope.smartTablePageSize = 10;
 
     $scope.smartTableData = [

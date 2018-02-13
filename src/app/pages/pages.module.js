@@ -20,6 +20,7 @@
       'BlurAdmin.pages.maps',
       'BlurAdmin.pages.profile',
 
+      'BlurAdmin.pages.register',
       'BlurAdmin.pages.patient',
 
 

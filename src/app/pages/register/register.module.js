@@ -5,22 +5,22 @@
 (function() {
   'use strict';
 
-  angular.module('BlurAdmin.pages.search', [])
+  angular.module('BlurAdmin.pages.register', [])
     .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-      .state('main.search', {
-        url: '/search',
-        templateUrl: 'app/pages/search/search.html',
-        title: 'Search',
+      .state('main.register', {
+        url: '/register',
+        templateUrl: 'app/pages/register/register.html',
+        title: 'Register',
         sidebarMeta: {
-          icon: 'ion-search',
+          icon: 'ion-document-text',
           order: 0,
         },
         authenticate: true,
-        controller: 'SearchCtrl'
+        controller: 'RegisterCtrl'
       });
   }
 

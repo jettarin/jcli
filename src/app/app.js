@@ -7,7 +7,7 @@ angular.module('BlurAdmin', [
   'ui.router',
   'ngTouch',
   'toastr',
-  // 'smart-table',
+  'smart-table',
   'angular-md5',
   "xeditable",
   'ui.slimscroll',
