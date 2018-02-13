@@ -1,0 +1,3 @@
+# jcli
+install
+npm install
